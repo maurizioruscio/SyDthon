@@ -82,7 +82,7 @@ def write_sid_header(f, song_length=1, chip='6581'):
     # Reserved (2 bytes)
     f.write(b'\x00\x00')
     # Strings: Title, Author, Released (32 bytes each)
-    for text in ("MP3->SID Converter", "ChatGPT", "2025"):  
+    for text in ("MP3->SID Converter", "Maurizio Ruscio", "2025"):  
         data = text.encode('ascii')[:32]
         f.write(data + b'\x00' * (32 - len(data)))
 
